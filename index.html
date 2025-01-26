@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timer</title>
+    <meta name="author" content="TheUnknownProgrammer" />
+    <meta
+      name="description"
+      content="Timer Created on vanilla: html,css,javascript."
+    />
+    <meta name="keywords" content="Timer" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div id="container">
+      <div id="Timer">
+        <div id="hours">
+          <h2>Hours</h2>
+          <div class="wrapper">
+            <div id="hours">
+              <button onclick='increment("hours-count")' class="btn-change">
+                +
+              </button>
+              <input
+                type="number"
+                id="hours-count"
+                onchange="fixInput(this)"
+                value="00"
+                min="0"
+                max="23"
+              />
+              <button onclick='decrement("hours-count")' class="btn-change">
+                -
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="seperate">:</div>
+        <div id="minutes">
+          <h2>Minutes</h2>
+          <div class="wrapper">
+            <div id="minutes">
+              <button onclick='increment("minutes-count")' class="btn-change">
+                +
+              </button>
+              <input
+                type="number"
+                id="minutes-count"
+                onchange="fixInput(this)"
+                min="0"
+                max="59"
+                value="00"
+              />
+              <button onclick='decrement("minutes-count")' class="btn-change">
+                -
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="seperate">:</div>
+        <div id="seconds">
+          <h2>Seconds</h2>
+          <div class="wrapper">
+            <div id="seconds">
+              <button onclick='increment("seconds-count")' class="btn-change">
+                +
+              </button>
+              <input
+                type="number"
+                id="seconds-count"
+                onchange="fixInput(this)"
+                min="0"
+                max="59"
+                value="00"
+              />
+              <button onclick='decrement("seconds-count")' class="btn-change">
+                -
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button id="start-timer-btn" title="start the timer." onclick="start()">
+        start
+      </button>
+      <button id="stop-timer-btn" title="stop the timer." onclick="stopTimer()">
+        stop
+      </button>
+      <button
+        id="reset-timer-btn"
+        title="reset the timer values."
+        onclick="reset()"
+      >
+        reset
+      </button>
+    </div>
+  </body>
+</html>
